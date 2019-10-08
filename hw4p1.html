@@ -1,0 +1,118 @@
+<!doctype html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>Assignment #4: Part 1</title>
+        <script language="javascript" type="text/javascript">
+            
+        var randArray[];
+        randArray = new var[6];
+            
+        for (var i = 0; i == randArray.length; i++) {
+            
+            do{
+            randArray[i] = ((var)(Math.random()*49)+1);
+            } while (i < 6);
+            
+            while (i == 6){
+            randArray[6] = ((var)(Math.random()*19)+1);
+            }
+        }
+            
+        </script>
+        </head>
+        
+        <body>
+            <form>
+            Pick 5 numbers between 1 and 48. Please separate each number with a space.<br>
+            <input type="text" id="5numbers" value="Enter here"> <br>
+            
+            Choose your Lucky Ball number (must be between 1 and 18).<br>
+            <input type="text" id="luckyball" value="Enter here"><br>
+            
+            <input type="button" onclick="getNumbers();" value="Click here for your prize!">
+            </form> 
+                <script language="javascript" type="text/javascript">
+                
+                function getNumbers(){
+                    var arr_5 []= document.getElementById("5numbers").value;
+                    var num_6 = document.activeElement("luckyball").value;
+                    var match = 0;
+                    var num_1 = parseInt("arr_5 [0]");
+                    var num_2 = parseInt("arr_5 [1]");
+                    var num_3 = parseInt("arr_5 [2]");
+                    var num_4 = parseInt("arr_5 [3]");
+                    var num_5 = parseInt("arr_5 [4]");
+                
+                    for (var x = 0; x == arr_5.length; x++){
+                        if (arr_5[x] == randArray[0]){
+                            match += 1;
+                        } 
+                        return match;
+                        if (arr_5[x] == randArray[1]){
+                            new match += 1;
+                        }
+                        return match;
+                        if (arr_5[x] == randArray[2]){
+                            new match += 1;
+                        }
+                        return match;
+                        if (arr_5[x] == randArray[3]){
+                            new match += 1;
+                        }
+                        return match;
+                        if (arr_5[x] == randArray[4]){
+                            new match +=1;
+                        }
+                        return match;
+                    }
+                    
+                    if (randArray[0] == num_1 && randArray[1] == num_2 && randArray[2] == num_3 && randArray[3] == num_4 && randArray[4] == num_5 && randArray[6] == num_6){
+                        alert("You win $7,000 a WEEK for LIFE!");
+                    } else {
+                    
+                    switch (match){
+                    case 5:
+                        alert("You win $25,000 a YEAR for LIFE!");        
+                        break;
+                    case 4: 
+                        if (randArray[6] == num_6){
+                            alert("You win $5,000!");
+                        } else {
+                            alert("You win $200!"); 
+                            }      
+                        break;
+                    case 3: //luckyball
+                        if (randArray[6] == num_6){
+                        alert("You win $150!"); 
+                        } else {
+                            alert("You win $20!"); 
+                            }
+                        break;
+                    case 2: //luckyball
+                        if (randArray[6] == num_6){
+                        alert("You win $25!"); 
+                        } else {
+                            alert("You win $3!");
+                            }
+                        break;
+                    case 1: //lucky ball
+                        if (randArray[6] == num_6){
+                        alert("You win $6!");
+                        } else {
+                            alert("You win $0... Try again next time!");
+                            }
+                        break;
+                    case 0: //lucky ball
+                        if (randArray[6] == num_6){
+                        alert("You win $4!"); 
+                        } else {
+                            alert("You win $0... Try again next time!");
+                            }
+                        break;
+                    }
+                    }
+                }
+                </script>
+        </body>
+</html>
